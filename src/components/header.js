@@ -11,8 +11,11 @@ export default function Header() {
       <AppBar position="static">
         <Toolbar>
           <Button color="inherit">Menu</Button>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+            Recipe finder
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Search for what you need
+          </Typography>
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
