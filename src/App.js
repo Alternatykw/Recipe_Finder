@@ -1,14 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
-function Header () {
-  return (
-    <header>
-      <h1>Header h1</h1>
-      <h2>Header h2</h2>
-    </header>
-  )
-}
+import Header from './components/header';
 
 function App() {
   return (
