@@ -9,6 +9,10 @@ const RecipeSearch = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
+    setSearchTerm('tofu');
+  }, []);
+
+  useEffect(() => {
     const handleSearch = async () => {
       const searchResults = await searchRecipes(searchTerm);
       setSearchResults(searchResults);
@@ -40,7 +44,7 @@ const RecipeSearch = () => {
         </StyledButton>
       </SearchContainer>
       <ResultsContainer>
-        {searchResults.length > 0 && (
+        {searchResults.length > 0 ? (
           <>
             <h2>Search Results:</h2>
             <CardWrapper>
@@ -56,7 +60,7 @@ const RecipeSearch = () => {
               ))}
             </CardWrapper>
           </>
-        )}
+        ) : (<h1> Recipes not found 🙁</h1>)}
       </ResultsContainer>
     </div>
   );
