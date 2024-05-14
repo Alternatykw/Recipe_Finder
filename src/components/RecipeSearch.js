@@ -51,11 +51,7 @@ const RecipeSearch = () => {
               {searchResults.map((result, index) => (
                 <RecipeCard
                   key={index}
-                  label={result.recipe.label}
-                  image={result.recipe.image}
-                  calories={result.recipe.calories}
-                  ingredients={result.recipe.ingredients}
-                  source={result.recipe.source}
+                  recipe={result.recipe}
                 />
               ))}
             </CardWrapper>
