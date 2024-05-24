@@ -36,3 +36,27 @@ export const Image = styled.img`
   width: 100%;
   height: auto;
 `;
+
+export const PercentageBarContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 1rem;
+  margin-top: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+`;
+
+export const PercentageBar = styled.div`
+  height: 100%;
+  background-color: ${(props) => props.color};
+  width: ${(props) => props.width};
+`;
+
+export const IndicatorCircle = styled.div`
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 8px;
+`;
