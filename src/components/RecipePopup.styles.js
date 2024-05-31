@@ -4,7 +4,6 @@ import { DialogContent } from '@mui/material';
 export const StyledDialogContent = styled(DialogContent)`
   display: flex;
   flex-direction: column;
-  justify-content: center;
 `;
 
 export const DialogItem = styled.div`
