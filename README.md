@@ -10,7 +10,7 @@ Recipe Finder is a simple and intuitive web application designed to help you fin
     <li><strong>Node.js</strong>: For server-side operations and API integration.</li>
     <li><strong>Edamam API</strong>: To fetch recipe data. Learn more about the API <a href="https://developer.edamam.com">here</a>.</li>
     <li><strong>MUI (Material-UI)</strong>: For a set of React components that implement Google's Material Design.</li>
-    <li><strong>Styled Components</strong>: For writing CSS as code to style components.</li>
+    <li><strong>Styled Components</strong>: To write CSS as code to style components.</li>
 </ul>
 <h3>Try It Out!</h3>
     <p>Click the link below to explore Recipe Finder:</p>
