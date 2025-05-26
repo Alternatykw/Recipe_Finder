@@ -1,26 +1,11 @@
-// api.js (your frontend utility file)
-
 export const searchRecipes = async (searchTerm) => {
-  try {
-    // Call your Vercel API route
-    // On Vercel, api/recipes.js becomes available at /api/recipes
-    const response = await fetch(`/api/recipes?q=${searchTerm}`);
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Error from Vercel API route:', errorData.error, errorData.details);
-      // You might want to throw an error or return a specific error state
+    try {
+      const response = await fetch(`https://api.edamam.com/search?q=${searchTerm}&app_id=a14c7f56&app_key=5c4c979e2c9cdffae08bb347d9dcd00b&from=0&to=20`);
+      const data = await response.json();
+      console.log('API response:', data);
+      return data.hits;
+    } catch (error) {
+      console.error('Error searching for recipes:', error);
       return [];
     }
-
-    const data = await response.json();
-    console.log('API response from Vercel route:', data);
-
-    // The data from your Vercel API route will already be `data.hits`
-    // so you can just return `data` directly here.
-    return data;
-  } catch (error) {
-    console.error('Error searching for recipes:', error);
-    return [];
-  }
-};
+  };
