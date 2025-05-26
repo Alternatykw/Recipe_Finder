@@ -44,7 +44,7 @@ const RecipeSearch = () => {
         </StyledButton>
       </SearchContainer>
       <ResultsContainer>
-        {Array.isArray(searchResults) && searchResults.length > 0 ? (
+        {searchResults.length > 0 ? (
           <>
             <h2>Search Results:</h2>
             <CardWrapper>
