@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { CardContent, CardMedia, Typography } from '@mui/material';
-import { StyledCard, FlexContainer, FlexItem } from './RecipeCard.styles';
+import { CardContent, Typography } from '@mui/material';
+import { StyledCard, FlexContainer, FlexItem, FixedCardMedia } from './RecipeCard.styles';
 import RecipePopup from './RecipePopup';
 
 const RecipeCard = ({ recipe }) => {
@@ -13,7 +13,7 @@ const RecipeCard = ({ recipe }) => {
   return (
     <>
       <StyledCard onClick={togglePopup}> 
-        <CardMedia component="img" image={recipe.image} alt={recipe.label} />
+        <FixedCardMedia component="img" image={recipe.image} alt={recipe.label} sx={{ objectFit: 'contain' }}/>
         <CardContent>
           <Typography gutterBottom variant="h7" height="3rem" component="div">
             {recipe.label}
@@ -32,7 +32,7 @@ const RecipeCard = ({ recipe }) => {
                 INGREDIENTS
               </Typography>
               <Typography variant="body2" color="#0bb10b;">
-                {recipe.ingredients.length}
+                {recipe.ingredientLines.length}
               </Typography>
             </FlexItem>
           </FlexContainer>

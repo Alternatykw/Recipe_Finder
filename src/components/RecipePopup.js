@@ -24,11 +24,11 @@ const RecipePopup = ({ recipe, onClose }) => {
           </Column>
           <Column>
             <Typography variant="h5" color="gray" paddingBottom="0.5rem" borderBottom="2px solid #ccc">
-              {recipe.ingredients.length} Ingredients
+              {recipe.ingredientLines.length} Ingredients
             </Typography>
             <ul>
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient.text}</li>
+              {recipe.ingredientLines.map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
               ))}
             </ul>
           </Column>

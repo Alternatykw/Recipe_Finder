@@ -1,10 +1,14 @@
 import styled from 'styled-components';
-import { Card } from '@mui/material';
+import { Card, CardMedia } from '@mui/material';
 
 export const StyledCard = styled(Card)`
   width: 250px;
   margin: 10px;
   background-color: #eee !important;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const FlexContainer = styled.div`
@@ -24,4 +28,10 @@ export const FlexItem = styled.div`
   &:first-child {
     border-right: 2px solid #ccc;
   }
+`;
+
+export const FixedCardMedia = styled(CardMedia)`
+  width: 100%;
+  height: 250px;
+  background-color: #eee;
 `;

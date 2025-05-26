@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
-import { SearchContainer, StyledButton, ResultsContainer, CardWrapper} from './RecipeSearch.styles';
-import { searchRecipes } from '../api';
-import RecipeCard from './RecipeCard';
+import { SearchContainer, StyledButton, ResultsContainer, CardWrapper} from './RecipeSearch.styles.js';
+import { searchRecipes } from '../api.js';
+import RecipeCard from './RecipeCard.js';
 
 const RecipeSearch = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('hot');
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    setSearchTerm('tofu');
-  }, []);
-
-  useEffect(() => {
     const handleSearch = async () => {
-      const searchResults = await searchRecipes(searchTerm);
-      setSearchResults(searchResults);
-    };
+      const results = await searchRecipes(searchTerm);
+      setSearchResults(results.hits);
+    };  
 
     handleSearch();
   }, [searchTerm]);
